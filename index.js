@@ -31,13 +31,6 @@ server.route([
 
 const init = async () => {
   await server.register(require('inert'))
-  await server.register({
-    plugin: require('hapi-pino'),
-    options: {
-      prettyPrint: true,
-      logEvents: []
-    }
-  })
   await server.start()
   console.log(`Server running at: ${server.info.uri}`)
   console.log('process.env', process.env.NODE_ENV)
