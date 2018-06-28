@@ -2,8 +2,7 @@ const Hapi = require('hapi')
 const moment = require('moment')
 
 const server = Hapi.server({
-  port: process.env.PORT || 3000,
-  host: 'localhost'
+  port: process.env.PORT || 3000
 })
 
 server.route([
