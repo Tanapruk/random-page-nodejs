@@ -10,7 +10,7 @@ server.route([
     method: 'GET',
     path: '/',
     handler: async (request, h) => {
-      request.logger.info('In handler %s', request.path)
+    
       const random = moment().format('SSS')
       if (random < 500) {
         return h.file('./public/success.html')
